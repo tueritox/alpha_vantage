@@ -60,10 +60,5 @@ def main():
                 ratios.to_excel(writer, sheet_name='Balance Sheet Ratios')
     
         
-
-    print(tick_list)
-
-
-
 if __name__ == '__main__':
     main()
