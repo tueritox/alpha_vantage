@@ -1,6 +1,7 @@
 import formulas as f
 import pandas as pd
 import time
+from openpyxl import load_workbook
 
 def main():
     """This function will download BALANCE SHEET and CASH FLOW STATEMENT for the tickers
@@ -30,12 +31,17 @@ def main():
             #look for the balance sheet and cash flow
             b_s, ratios = f.balance_sheet(i)
             cash = f.cash_flow(i)
+            print(i)
             #Download all the data into an excel
-            with pd.ExcelWriter(i+'.xlsx', mode='a') as writer:
-                b_s.to_excel(writer, sheet_name= 'Balance Sheet') 
-                ratios.to_excel(writer, sheet_name='Balance Sheet Ratios')
-                cash.to_excel(writer, sheet_name= 'Cash Flow Statement')
-            time.sleep(61) 
+            book = load_workbook(i+'.xlsx')
+            writer = pd.ExcelWriter(i+'.xlsx', engine='openpyxl')
+            writer.book = book
+            b_s.to_excel(writer, sheet_name= 'Balance Sheet') 
+            ratios.to_excel(writer, sheet_name='Balance Sheet Ratios')
+            cash.to_excel(writer, sheet_name= 'Cash Flow Statement')
+            writer.close()
+            if len(down_list) > 1:
+                time.sleep(61) 
         #if there is no excel for the ticker, we have to download all the data and create the excel
         #this will take a lot of time, taking into account the restrictions given by the API
         else:
@@ -55,10 +61,15 @@ def main():
             time.sleep(61)
             #download the missing info
             b_s, ratios = f.balance_sheet(i)
-            with pd.ExcelWriter(i+'.xlsx', mode='a') as writer:
+            with pd.ExcelWriter(i+'.xlsx', engine='openpyxl', mode='a') as writer:
                 b_s.to_excel(writer, sheet_name= 'Balance Sheet') 
                 ratios.to_excel(writer, sheet_name='Balance Sheet Ratios')
     
         
+
+    print(tick_list)
+
+
+
 if __name__ == '__main__':
     main()
