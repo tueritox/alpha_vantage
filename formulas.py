@@ -30,9 +30,9 @@ def overview(ticker):
     except:
         pegratio = 0
     try:
-        growth_5y = round(float(data['PERatio']) / float(data['PEGRatio']), 2)
+        growth = round(float(data['PERatio']) / float(data['PEGRatio']), 2)
     except:
-        growth_5y = 0
+        growth = 0
     psratio = data['PriceToSalesRatioTTM']
     book_value = data['BookValue']
     pbookratio =data['PriceToBookRatio']
@@ -64,7 +64,7 @@ def overview(ticker):
     #create de data frame with all the information
     overview_df = pd.DataFrame({'TICKER': t, 'Revenue [millions]': revenue, 'Gross Margin [%]': gross_margin, 
                         'P/E Ratio': peratio, 'P/E/G Ratio': pegratio,
-                        'Growth 5 years [%]': growth_5y, 'P/S Ratio':psratio, 
+                        'Growth 5 years [%]': growth, 'P/S Ratio':psratio, 
                         'Book Value per Share': book_value, 'P/B Ratio': pbookratio,
                         "Dividens per Share": dividends_share, 'EPS': eps,
                         'Revenue per Share': revenue_share, 'ROE': roe, 'ROA': roa,
