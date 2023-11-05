@@ -9,7 +9,7 @@ If you have doubts in any of the ratios, and formulas I use, a good place to sta
 This does not constitute any kind of investment advice, this is just information from which you will draw your own conclusions, and your own investment soundness. The opinions I leave in all of these scripts and readmes are my own vision, and can be mistaken. There is only one certainty, the future is known by no one.
 I hope this is useful for people to better understand their portfolios, or help them create one.
 
-LAST UPDATE 14/09/2023 (DD/MM/YYYY)
+LAST UPDATE 05/11/2023 (DD/MM/YYYY)
 
 THIS IS A WORK IN PROGRESS, SO IT WILL BE CHANGED REGULARLY.
 
