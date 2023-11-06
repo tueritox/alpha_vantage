@@ -404,7 +404,7 @@ def balance_sheet(ticker):
                        'Total Shareholder Equity': totalShareholderEquity, 'Treasury Stock': treasuryStock,
                        'Other Non Current Liabilities': otherNonCurrentLiabilities, 
                        'Retained Earnings': retainedEarnings, 'Common Stock': commonStock, 
-                       'commonStockSharesOutstanding': commonStockSharesOutstanding})
+                       'Common Stock Shares Outstanding': commonStockSharesOutstanding})
     balance_sheet_df = balance_sheet_df.T
     balance_sheet_df = balance_sheet_df.fillna(0)
     balance_sheet_df = balance_sheet_df.replace(to_replace = "None", value = 0)
