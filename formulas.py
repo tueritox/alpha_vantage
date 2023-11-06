@@ -66,7 +66,7 @@ def overview(ticker):
                         'P/E Ratio': peratio, 'P/E/G Ratio': pegratio,
                         'Growth [%]': growth, 'P/S Ratio':psratio, 
                         'Book Value per Share': book_value, 'P/B Ratio': pbookratio,
-                        "Dividens per Share": dividends_share, 'EPS': eps,
+                        "Dividends per Share": dividends_share, 'EPS': eps,
                         'Revenue per Share': revenue_share, 'ROE': roe, 'ROA': roa,
                         'Profit Margin [%]': profit_margin, 'Operating Margin [%]': operating_margin,
                         'EBITDA': ebitda, 'EBITDA per Share': ebitda_shares, 'Beta': beta,
