@@ -175,7 +175,7 @@ def cash_flow(ticker):
                        'Payments for Repurchase of Common Stock': paymentsForRepurchaseOfCommonStock,
                        'Payments for Repurchase of Equity': paymentsForRepurchaseOfEquity,
                        'Payments for Repurchase of Preferred Stock': paymentsForRepurchaseOfPreferredStock,
-                       'Dividens Payout': dividendPayout,
+                       'Dividends Payout': dividendPayout,
                        'Dividend Payout Common Stock': dividendPayoutCommonStock, 
                        'Dividend Payout Preferred Stock': dividendPayoutPreferredStock,
                        'Proceeds from Issuance of Common Stock': proceedsFromIssuanceOfCommonStock, 
